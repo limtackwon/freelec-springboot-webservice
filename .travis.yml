@@ -35,7 +35,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY # Travis repo settings 설정된 값
     secret_access_key: $AWS_SECRET_KEY # Travis repo settings 설정된 값
     bucket: springboot-build-repository # s3 버킷
-    key: springboot-build-repository.zip
+    key: freelec-springboot-webservice.zip
     bundle_type: zip
     application: springboot-webservice
     deployment_group: springboot-webservice
