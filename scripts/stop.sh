@@ -14,6 +14,6 @@ then
   echo "> 현재 구동 중인 PID 없습니다"
 else
   echo "> kill -15 $IDLE_PID"
-  kill -15 ${IDLE_PORT}
+  kill -15 ${IDLE_PID}
   sleep 5
 fi
