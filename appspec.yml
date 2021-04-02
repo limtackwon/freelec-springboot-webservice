@@ -16,7 +16,7 @@ hooks:
     - location: stop.sh #nginx 연결되지 않은 서버 종료
       time: 60
       runas: ec2-user
-  ApplicationsStart:
+  ApplicationStart:
     - location: start.sh #nginx 연결되지 않은 port로 세 버전의 서버 시작
       timeout: 60
       runas: ec2-user
