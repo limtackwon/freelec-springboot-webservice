@@ -29,6 +29,11 @@ public class IndexController {
         return "index";
     }
 
+    @GetMapping("/bridge")
+    public String bridge(Model model, @LoginUser SessionUser user){
+        return "bridge";
+    }
+
     @GetMapping("/posts/save")
     public String postsSave(){return "posts-save";}
 

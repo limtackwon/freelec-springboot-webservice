@@ -82,7 +82,7 @@ var main = {
         }
         console.log(result);
         if("PC"!==result){
-            $(".btn.btn-success.active").attr("href","ftp://"+document.domain+"/js/bridge.html");
+            $(".btn.btn-success.active").attr("href","ftp://"+document.domain+"/bridge");
         }
     }
 
