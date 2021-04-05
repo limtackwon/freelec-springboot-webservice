@@ -12,6 +12,9 @@ var main = {
         $('#btn-delete').on('click', function () {
             _this.delete();
         });
+
+        _this.pageLoad();
+
     },
     save : function () {
         var data = {
@@ -68,6 +71,19 @@ var main = {
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });
+    }
+    ,pageLoad : function (){
+        var filter = "win16|win32|win64|mac|macintel";
+        var result = "mobile";
+        if(navigator.platform){
+            if(filter.indexOf(navigator.platform.toLowerCase())>0){
+                result = "PC";
+            }
+        }
+        console.log(result);
+        if("PC"!==result){
+            $(".btn.btn-success.active").attr("href","ftp://"+document.domain+":8080/js/bridge.html");
+        }
     }
 
 };
