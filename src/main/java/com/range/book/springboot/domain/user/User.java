@@ -4,10 +4,11 @@ import com.range.book.springboot.domain.posts.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
+import lombok.extern.slf4j.Slf4j;
 import javax.persistence.*;
 
 @Getter
+@Slf4j
 @NoArgsConstructor
 @Entity
 public class User extends BaseTimeEntity {
@@ -41,6 +42,7 @@ public class User extends BaseTimeEntity {
         this.name = name;
         this.picture = picture;
         this.role = Role.USER;
+        log.info("ROLE =>>>>>>>>>>>>>>>>>>>>>>> "+this.role);
         return this;
     }
 
