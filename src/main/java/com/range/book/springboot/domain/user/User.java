@@ -42,7 +42,6 @@ public class User extends BaseTimeEntity {
         this.name = name;
         this.picture = picture;
         this.role = Role.USER;
-        log.info("ROLE =>>>>>>>>>>>>>>>>>>>>>>> "+this.role);
         return this;
     }
 
