@@ -80,7 +80,7 @@ var main = {
                 result = "PC";
             }
         }
-        console.log(result);
+        alert(navigator.userAgent.toLowerCase());
         if("PC"!==result){
             //$(".btn.btn-success.active").attr("href","://"+document.domain+"/bridge");
         }
