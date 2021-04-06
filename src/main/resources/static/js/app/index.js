@@ -73,16 +73,18 @@ var main = {
         });
     }
     ,pageLoad : function (){
-        var filter = "win16|win32|win64|mac|macintel";
-        var result = "mobile";
-        if(navigator.platform){
-            if(filter.indexOf(navigator.platform.toLowerCase())>0){
-                result = "PC";
+        var filter = "chrome|safari";
+        var result = "";
+        if(navigator.userAgent.toLowerCase()){
+            if(filter.indexOf(navigator.userAgent.toLowerCase())>0){
+                result = "OK";
             }
         }
-        alert(navigator.userAgent.toLowerCase());
-        if("PC"!==result){
-            //$(".btn.btn-success.active").attr("href","://"+document.domain+"/bridge");
+        if("OK"!==result){
+            $(".btn.btn-success.active").attr("href","");
+            $(".btn.btn-success.active").on("click",function(){
+               alert("크롬 또는 사파리 브라우저를 사용하세요");
+            });
         }
     }
 
