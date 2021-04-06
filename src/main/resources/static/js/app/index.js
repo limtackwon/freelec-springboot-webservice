@@ -13,6 +13,11 @@ var main = {
             _this.delete();
         });
 
+        $("btn btn-secondary active").on("click",function(){
+            alert("네이버 로그인을 이용하려면 메일을 보내주세요");
+            $("btn btn-secondary active").html("ltw20140917@gmail.com");
+        });
+
         _this.pageLoad();
 
     },
@@ -73,10 +78,13 @@ var main = {
         });
     }
     ,pageLoad : function (){
+        //네아로 설정
+        $("btn btn-secondary active").attr("href","");
+
         var filter = "chrome|safari";
         var result = "";
         if(navigator.userAgent.toLowerCase()){
-            if(filter.indexOf(navigator.userAgent.toLowerCase())>0){
+            if(navigator.userAgent.toLowerCase().indexOf("chrome")>0||navigator.userAgent.toLowerCase().indexOf("safari")){
                 result = "OK";
             }
         }
