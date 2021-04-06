@@ -13,9 +13,9 @@ var main = {
             _this.delete();
         });
 
-        $("btn btn-secondary active").on("click",function(){
+        $(".btn.btn-secondary.active").on("click",function(){
             alert("네이버 로그인을 이용하려면 메일을 보내주세요");
-            $("btn.btn-secondary.active").html("ltw20140917@gmail.com");
+            $(".btn.btn-secondary.active").html("ltw20140917@gmail.com");
         });
 
         _this.pageLoad();
@@ -79,7 +79,7 @@ var main = {
     }
     ,pageLoad : function (){
         //네아로 설정
-        $("btn.btn-secondary.active").attr("href","");
+        $(".btn.btn-secondary.active").attr("href","");
 
         var filter = "chrome|safari";
         var result = "";
@@ -88,7 +88,6 @@ var main = {
                 result = "OK";
             }
         }
-        alert(navigator.userAgent.toLowerCase());
         if("OK"!==result){
             $(".btn.btn-success.active").attr("href","");
             $(".btn.btn-success.active").on("click",function(){
