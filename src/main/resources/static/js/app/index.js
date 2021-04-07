@@ -16,9 +16,9 @@ var main = {
         _this.pageLoad();
 
         $(".btn.btn-secondary.active").on("click",function(e){
-            alert("네이버 로그인을 이용하려면 메일을 보내주세요");
+            //alert("네이버 로그인을 이용하려면 메일을 보내주세요");
             //$(".btn.btn-secondary.active").html("ltw20140917@gmail.com");
-            $("div>.col-md-6").append("<div>보내실 메일 주소 : ltw20140917@gmail.com</div>");
+            //$("div>.col-md-6").append("<div>보내실 메일 주소 : ltw20140917@gmail.com</div>");
 
         });
 
@@ -81,7 +81,7 @@ var main = {
     }
     ,pageLoad : function (){
         //네아로 설정
-        $(".btn.btn-secondary.active").attr("href","javascript:void(0);");
+        //$(".btn.btn-secondary.active").attr("href","javascript:void(0);");
 
         var filter = "chrome|safari";
         var result = "";
